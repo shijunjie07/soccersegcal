@@ -588,7 +588,7 @@ def load_start_positions():
     long_start = np.load("/kaggle/working/soccersegcal/stats/long_side_start_positions.npy")
     long_pan = [0] * len(long_start) + [np.pi] * len(long_start)
     long_start = np.vstack([long_start, long_start * [1, -1, 1]])
-    short_start = np.load("stats/short_side_start_positions.npy")
+    short_start = np.load("/kaggle/working/soccersegcal/stats/short_side_start_positions.npy")
     short_pan = [3*np.pi/2] * len(short_start)
     start = np.vstack([short_start, long_start])
     pan = np.hstack([short_pan, long_pan])
