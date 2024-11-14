@@ -585,7 +585,7 @@ def segs2cam(segs, world_scale, additional_start_cam=None, *, show=False):
     return best_model
 
 def load_start_positions():
-    long_start = np.load("stats/long_side_start_positions.npy")
+    long_start = np.load("../../stats/long_side_start_positions.npy")
     long_pan = [0] * len(long_start) + [np.pi] * len(long_start)
     long_start = np.vstack([long_start, long_start * [1, -1, 1]])
     short_start = np.load("stats/short_side_start_positions.npy")
